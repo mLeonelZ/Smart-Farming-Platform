@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: smart-farming-api
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/smart_farming_db
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
