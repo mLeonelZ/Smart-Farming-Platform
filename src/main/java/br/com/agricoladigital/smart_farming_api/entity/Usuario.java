@@ -28,8 +28,26 @@ public class Usuario {
     private String senhaHash;
 
     @Column(nullable = false, length = 50)
-    private String perfil;
+    @Enumerated(EnumType.STRING)
+    private PerfilUsuario perfil;
 
     @OneToMany(mappedBy = "usuario")
     private List<Fazenda> fazendas = new ArrayList<>();
+
+    public Usuario(String nome, String email, String senhaHash, PerfilUsuario perfil) {
+        this.nome = nome;
+        this.email = email;
+        this.senhaHash = senhaHash;
+        this.perfil = perfil;
+    }
+
+    public void atualizarDados(String nome, String email, PerfilUsuario perfil) {
+        this.nome = nome;
+        this.email = email;
+        this.perfil = perfil;
+    }
+
+    public void alterarSenha(String senhaHash) {
+        this.senhaHash = senhaHash;
+    }
 }

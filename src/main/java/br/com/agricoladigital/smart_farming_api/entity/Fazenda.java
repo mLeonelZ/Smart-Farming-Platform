@@ -34,4 +34,10 @@ public class Fazenda {
         this.areaTotal = areaTotal;
         this.usuario = usuario;
     }
+
+    public void atualizar(String nome, String localizacao, Double areaTotal) {
+        this.nome = nome;
+        this.localizacao = localizacao;
+        this.areaTotal = areaTotal;
+    }
 }

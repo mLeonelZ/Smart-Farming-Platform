@@ -34,4 +34,10 @@ public class Talhao {
         this.geometria = geometria;
         this.fazenda = fazenda;
     }
+
+    public void atualizar(String identificacao, Double areaHectares, String geometria) {
+        this.identificacao = identificacao;
+        this.areaHectares = areaHectares;
+        this.geometria = geometria;
+    }
 }
